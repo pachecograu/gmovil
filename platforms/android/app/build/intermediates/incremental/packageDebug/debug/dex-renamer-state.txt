@@ -1,0 +1,4 @@
+#Thu Nov 12 11:49:47 COT 2020
+base.0=/Users/hypersoft2/Desktop/proyectos/gmovil/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

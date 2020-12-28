@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-aframe" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-aframe</name>
+    <dependency id="cordova-plugin-xhr-local-file" />
+
+    <js-module name="aframe-js" src="www/aframe-master.js">
+        <runs />
+    </js-module>
+    <asset src="./www/aframe-master.js.map" target="./www"/>
+    <asset src="./www/aframe-cordova.css" target="./www"/>
+</plugin>

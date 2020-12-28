@@ -1,0 +1,71 @@
+{
+  "_from": "cordova-plugin-xhr-local-file",
+  "_id": "cordova-plugin-xhr-local-file@0.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-IUShwDKa3g5f7G6S26qzNXg9TMqVn1UbqCpr4rQkcLjFXzJIDa/326kehqqd8hq4v2ip8yLdW/GUa12VPi7AOQ==",
+  "_location": "/cordova-plugin-xhr-local-file",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-xhr-local-file",
+    "name": "cordova-plugin-xhr-local-file",
+    "escapedName": "cordova-plugin-xhr-local-file",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-xhr-local-file/-/cordova-plugin-xhr-local-file-0.0.6.tgz",
+  "_shasum": "8ec20c4bb26041ed2340bfbfc172f7758064755c",
+  "_spec": "cordova-plugin-xhr-local-file",
+  "_where": "/Users/hypersoft2/Desktop/proyectos/gmovil",
+  "author": {
+    "name": "Ben Allfree"
+  },
+  "bugs": {
+    "url": "https://github.com/benallfree/cordova-plugin-xhr-local-file/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-xhr-local-file",
+    "platforms": []
+  },
+  "dependencies": {},
+  "deprecated": false,
+  "description": "XHR polyfill to load file:// URLs",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "path-browserify": "^1.0.0",
+    "rollup": "^1.31.1",
+    "shx": "^0.3.2",
+    "tslib": "^1.11.0",
+    "typescript": "^3.8.2"
+  },
+  "homepage": "https://github.com/benallfree/cordova-plugin-xhr-local-file#readme",
+  "keywords": [
+    "cordova",
+    "file",
+    "xhr",
+    "xmlhttprequest",
+    "local"
+  ],
+  "license": "UPL",
+  "name": "cordova-plugin-xhr-local-file",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benallfree/cordova-plugin-xhr-local-file.git"
+  },
+  "scripts": {
+    "build": "npm run build:clean && npm run build:ts && npm run build:rollup",
+    "build:clean": "shx rm -rf build tstmp",
+    "build:rollup": "rollup -c",
+    "build:ts": "shx rm -rf ./tstmp && tsc",
+    "watch": "chokidar \"./src\" -c \"npm run build\""
+  },
+  "version": "0.0.6"
+}

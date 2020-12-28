@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Framework7</title>
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+  <script src="js/adapter.js"></script>
+  <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+  <script src='https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js'></script>
+  <script>
+    try {
+      // THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    } catch (error) {
+      alert(error)
+    }
+  </script>
+</head>
+
+<body>
+  <script src="js/places.js"></script>
+  <div id="app">
+    <div class="panel panel-left panel-cover panel-resizable panel-init">
+      <div class="page">
+        <div class="page-content">
+          <div class="block-title">Left Panel</div>
+          <div class="block">
+            <p>This is a left side panel. You can close it by clicking outsite or on this link: <a href="#"
+                class="panel-close">close me</a>. You can put here anything, even another isolated view like in <a
+                href="#" data-panel="right" class="panel-open">Right Panel</a></p>
+          </div>
+          <div class="block-title">Main View Navigation</div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/accordion/" class="panel-close">Accordion</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Action Sheet</a>
+              </li>
+              <li>
+                <a href="/badge/" class="panel-close">Badge</a>
+              </li>
+              <li>
+                <a href="/buttons/" class="panel-close">Buttons</a>
+              </li>
+              <li>
+                <a href="/cards/" class="panel-close">Cards</a>
+              </li>
+              <li>
+                <a href="/checkbox/" class="panel-close">Checkbox</a>
+              </li>
+              <li>
+                <a href="/chips/" class="panel-close">Chips/Tags</a>
+              </li>
+              <li>
+                <a href="/contacts-list/" class="panel-close">Contacts List</a>
+              </li>
+              <li>
+                <a href="/data-table/" class="panel-close">Data Table</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus mauris leo, eu bibendum
+              neque congue non. Ut leo mauris, eleifend eu commodo a, egestas ac urna. Maecenas in lacus faucibus,
+              viverra ipsum pulvinar, molestie arcu. Etiam lacinia venenatis dignissim. Suspendisse non nisl semper
+              tellus malesuada suscipit eu et eros. Nulla eu enim quis quam elementum vulputate. Mauris ornare consequat
+              nunc viverra pellentesque. Aenean semper eu massa sit amet aliquam. Integer et neque sed libero mollis
+              elementum at vitae ligula. Vestibulum pharetra sed libero sed porttitor. Suspendisse a faucibus lectus.
+            </p>
+            <p>Duis ut mauris sollicitudin, venenatis nisi sed, luctus ligula. Phasellus blandit nisl ut lorem semper
+              pharetra. Nullam tortor nibh, suscipit in consequat vel, feugiat sed quam. Nam risus libero, auctor vel
+              tristique ac, malesuada ut ante. Sed molestie, est in eleifend sagittis, leo tortor ullamcorper erat, at
+              vulputate eros sapien nec libero. Mauris dapibus laoreet nibh quis bibendum. Fusce dolor sem, suscipit in
+              iaculis id, pharetra at urna. Pellentesque tempor congue massa quis faucibus. Vestibulum nunc eros,
+              convallis blandit dui sit amet, gravida adipiscing libero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-right panel-reveal panel-resizable panel-init">
+      <div class="view view-init view-right" data-name="right" data-url="/">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#"
+                  class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+            </div>
+            <div class="block-title">Panel Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                <li><a href="/panel-right-2/">Right panel page 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
+      <template>
+        <div class="page page-home">
+          <div class="navbar navbar-large navbar-transparent">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons if-not-md">menu</i>
+                  <i class="icon material-icons md-only">menu</i>
+                </a>
+              </div>
+              <div class="title sliding">Framework7</div>
+              <div class="right">
+                <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                  <i class="icon f7-icons if-not-md">search</i>
+                  <i class="icon material-icons md-only">search</i>
+                </a>
+              </div>
+              <div class="title-large">
+                <div class="title-large-text">Framework7</div>
+              </div>
+              <form data-search-container=".components-list" data-search-in="a"
+                class="searchbar searchbar-expandable searchbar-components searchbar-init">
+                <div class="searchbar-inner">
+                  <div class="searchbar-input-wrap">
+                    <input type="search" placeholder="Search components" />
+                    <i class="searchbar-icon"></i>
+                    <span class="input-clear-button"></span>
+                  </div>
+                  <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block" id="brujula">
+              <div class="card">
+                <div class="card-header">DEVICE MOTION</div>
+                <div class="card-content">
+                  <h2>Motion</h2>
+                  <div class="row">
+                    <div class="one-half column">
+                      <h5>Acceleration: <span id="maccel">?</span></h5>
+                    </div>
+                    <div class="one-half column">
+                      <h5>Acceleration w/ Gravity: <span id="maccelg">?</span></h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="one-half column">
+                      <h5>Rotation Rate: <span id="mrr">?</span></h5>
+                    </div>
+                    <div class="one-half column">
+                      <h5>Interval: <span id="mint">?</span></h5>
+                    </div>
+                  </div>
+                  <hr>
+                  <h2>Orientation</h2>
+                  <div class="row">
+                    <div class="one-half column">
+                      <h5>Absolute: <span id="oabsolute">?</span></h5>
+                    </div>
+                    <div class="one-half column">
+                      <h5>Alpha (z): <span id="oalpha">?</span></h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="one-half column">
+                      <h5>Beta (x): <span id="obeta">?</span></h5>
+                    </div>
+                    <div class="one-half column">
+                      <h5>Gamma (y): <span id="ogamma">?</span></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">Footer</div>
+              </div>
+            </div>
+            <div class="block" id="camara" style='margin: 0; overflow: hidden;'>
+              <a-scene cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;' raycaster="objects: [gps-entity-place];"
+                vr-mode-ui="enabled: false" embedded
+                arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+
+                <a-camera gps-camera rotation-reader>
+                </a-camera>
+              </a-scene>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+  <script>
+    return {
+      // Component Data
+      data: function () {
+        // Must return an object
+        return {
+          maccel: '?',
+          maccelg: '?',
+          mrr: '?',
+          mint: '?',
+          oabsolute: '?',
+          oalpha: '?',
+          obeta: '?',
+          ogamma: '?',
+        }
+      },
+      on: {
+        pageInit: function () {
+
+          var self = this;
+          // Run all captures for 10 seconds
+          const captureSeconds = 10
+
+          // Need to use this to determine if we've initialised the application since
+          // the initial listener can somehow fire multiple times before removal
+          let appInitialised = false
+
+          window.addEventListener('deviceorientation', applicationInitialisationEvent, true)
+
+          function applicationInitialisationEvent() {
+            if (appInitialised) {
+              return
+            }
+            // alert('applicationInitialisationEvent')
+
+            appInitialised = true
+
+            console.log('intialising the application')
+
+            // document.getElementById('supported-check-panel').style = 'display: none;'
+            // document.getElementById('capture-panel').style = ''
+
+            startMotionCapture()
+            startOrientationCapture()
+
+            window.removeEventListener('deviceorientation', applicationInitialisationEvent)
+          }
+
+          function startOrientationCapture() {
+            const capturedEvents = []
+            const startTs = new Date().getTime()
+            const endTs = startTs + captureSeconds * 1000
+            const downloadOrientationDataBtn = document.getElementById('download-orientation')
+
+            const oabsolute = document.getElementById('oabsolute')
+            const oalpha = document.getElementById('oalpha')
+            const obeta = document.getElementById('obeta')
+            const ogamma = document.getElementById('ogamma')
+
+            const onOrientationEvent = (e) => {
+              // alert(e.absolute)
+              oabsolute.textContent = e.absolute
+              oalpha.textContent = e.alpha.toFixed(4)
+              obeta.textContent = e.beta.toFixed(4)
+              ogamma.textContent = e.gamma.toFixed(4)
+
+              if (e.beta.toFixed(4) > 50) {
+                document.getElementById('brujula').style = 'display: none;'
+                document.getElementById('camara').style = 'display: block;'
+              } else {
+                document.getElementById('camara').style = 'display: none;'
+                document.getElementById('brujula').style = 'display: block;'
+              }
+
+              if (new Date().getTime() < endTs) {
+                capturedEvents.push({
+                  absolute: e.absolute,
+                  alpha: e.alpha,
+                  beta: e.beta,
+                  gamma: e.gamma,
+                  ts: Date.now()
+                })
+              }
+            }
+
+
+            window.addEventListener('deviceorientation', onOrientationEvent, true)
+          }
+
+          function startMotionCapture() {
+            // alert('startMotionCapture')
+            const capturedEvents = []
+            const startTs = new Date().getTime()
+            const endTs = startTs + captureSeconds * 1000
+            const downloadMotionDataBtn = document.getElementById('download-motion')
+
+            const maccel = document.getElementById('maccel')
+            const maccelg = document.getElementById('maccelg')
+            const mrr = document.getElementById('mrr')
+            const mint = document.getElementById('mint')
+
+            let latestEvent = null
+
+            // Throttle UI update to once per second (otherwise...aaaagh my eyes!)
+            let updateInterval = setInterval(() => {
+              if (latestEvent) {
+                maccel.textContent = `${latestEvent.acceleration.x.toFixed(2)}x, ${latestEvent.acceleration.y.toFixed(2)}y,
+        ${latestEvent.acceleration.z.toFixed(2)}z`
+                maccelg.textContent = `${latestEvent.accelerationIncludingGravity.x.toFixed(2)}x,
+        ${latestEvent.accelerationIncludingGravity.y.toFixed(2)}y,
+        ${latestEvent.accelerationIncludingGravity.z.toFixed(2)}z`
+                mrr.textContent = `${latestEvent.rotationRate.alpha.toFixed(2)}α, ${latestEvent.rotationRate.beta.toFixed(2)}β,
+        ${latestEvent.rotationRate.gamma.toFixed(2)}γ`
+                mint.textContent = `${latestEvent.interval}ms`
+              }
+            }, 100)
+
+            const onMotionEvent = (e) => {
+              latestEvent = e
+
+              if (new Date().getTime() < endTs) {
+                capturedEvents.push({
+                  acceleration: {
+                    x: latestEvent.acceleration.x,
+                    y: latestEvent.acceleration.y,
+                    z: latestEvent.acceleration.z
+                  },
+                  accelerationIncludingGravity: {
+                    x: latestEvent.accelerationIncludingGravity.x,
+                    y: latestEvent.accelerationIncludingGravity.y,
+                    z: latestEvent.accelerationIncludingGravity.z
+                  },
+                  rotationRate: {
+                    alpha: latestEvent.rotationRate.alpha,
+                    beta: latestEvent.rotationRate.beta,
+                    gamma: latestEvent.rotationRate.gamma
+                  },
+                  interval: latestEvent.interval,
+                  ts: Date.now()
+                })
+              }
+            }
+
+            window.addEventListener('devicemotion', onMotionEvent, true)
+          }
+        },
+      },
+    }
+    document.addEventListener('DOMContentLoaded', function(){ //equivalent to jQuery $('document').ready(function(){})
+    /* alert("this will show"); */
+    alert = function(){};
+    /* alert("ALL alert after this won't show"); */
+    }, false);
+  </script>
+  <script src="cordova.js"></script>
+  <script src="framework7/js/framework7.bundle.min.js"></script> 
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

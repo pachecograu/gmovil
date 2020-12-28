@@ -1,0 +1,47 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-aframe": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-settings-hook": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "phonegap-plugin-media-stream": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "cordova-plugin-xhr-local-file": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "con.jp.gmovil"
+    }
+  }
+}
